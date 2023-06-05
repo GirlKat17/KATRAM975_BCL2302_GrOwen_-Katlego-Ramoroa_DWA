@@ -4,7 +4,7 @@
  * Student Name
  * @type {string}
  */
-const StudentName= 'Katlego Ramoroa';
+const StudentName = 'Katlego Ramoroa';
 
 /**
  * Array of grades
