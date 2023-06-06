@@ -12,16 +12,17 @@ form.addEventListener("submit", (event) => {
 
   try {
     if (divider == "" || dividend == ""){  
-  throw "Try again ";}
+  throw "Division not performed. Both values are required in inputs. Try again ";}
 
   if (divider <=0 && dividend <=0){
-    throw "Invaild number";}
+    throw "Division not performed. Invalid number provided. Try again";}
 
-  
-result.innerText = dividend / divider;
+  result.innerText = Math.floor (dividend / divider);
+
     }catch(e){
       console.error(e)
    result.innerHTML = e
+   
 
    }
 
