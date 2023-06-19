@@ -12,18 +12,22 @@ form.addEventListener("submit", (event) => {
 
   try {
     if (divider == "" || dividend == ""){  
-  throw "Division not performed. Both values are required in inputs. Try again ";}
+      throw "Division not performed. Both values are required in inputs. Try again ";}
 
-  if (divider <=0 && dividend <=0){
-    throw "Division not performed. Invalid number provided. Try again";}
+    if (divider <=0 && dividend <=0){
+      throw "Division not performed. Invalid number provided. Try again";}
+
+    if (divider == 'YOLO' || dividend =='YOLO') {
+
+      throw ( document.body.innerHTML = /* html*/ `Something critical went wrong. Please reload the page.`);}
+
 
   result.innerText = Math.floor (dividend / divider);
 
     }catch(e){
       console.error(e)
-   result.innerHTML = e
+      result.innerHTML = e
    
-
    }
 
 // function check()

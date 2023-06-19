@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazing Todo List App</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="./script.js" defer type="module"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="calander.css">
+<script src="Calander.js" defer type="module"></script>
+</head>
+<body>
+
+  
+  <div class="container">
+    <h1>📋Todo List App</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Enter a task">
+      <input type="date" id="DateEntered"> 
+      <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="filter-options">
+      <button class="filter-btn" data-filter="all">📚All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">✅Completed</button>
+   
+    </div>
+    <button id="clear-completed-btn">Clear Completed</button>
+    
+  </div>
+
+  
+  <div class="calander">
+        <h1 data-title>Loading...</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="table__cell table__cell_heading">Week</th>
+                    <th class="table__cell table__cell_heading">Sun</th>
+                    <th class="table__cell table__cell_heading">Mon</th>
+                    <th class="table__cell table__cell_heading">Tue</th>
+                    <th class="table__cell table__cell_heading">Wed</th>
+                    <th class="table__cell table__cell_heading">Thu</th>
+                    <th class="table__cell table__cell_heading">Fri</th>
+                    <th class="table__cell table__cell_heading">Sat</th>
+                </tr>
+            </thead>
+
+            <tbody data-content></tbody>
+        </table>
+    </div>
+  
+</body>
+</html>
+

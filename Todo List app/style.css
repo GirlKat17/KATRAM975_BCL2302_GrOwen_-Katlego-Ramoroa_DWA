@@ -1,0 +1,87 @@
+body {
+  
+  background-image: url(./Images/App\ Bc.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+
+}
+
+.container {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top:10px;
+  background-color:rgb(222, 233, 237);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left:25%;
+
+
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(35, 72, 74);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li span {
+  flex: 1;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+li button {
+  margin-left: 10px;
+  background-color: #e97168;
+}
+
+#filter-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.filter-btn {
+  margin-right: 5px;
+}
+
+#clear-completed-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #7a92e1;
+}
