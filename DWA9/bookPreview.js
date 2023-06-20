@@ -1,3 +1,3 @@
-import bookPreview from "./Componet.js"
+import BookPreview from "./Componet.js"
 
-window.customElements.define {"book_preview",bookPreview};
+window.customElements.define ("book-preview", BookPreview);

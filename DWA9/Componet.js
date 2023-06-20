@@ -66,7 +66,7 @@ template.innerHTML = `
         <img class="overlay__image" data-list-image src=""/>
     </div>
     <div class="overlay__content">
-        <h3 class="overlay__title" data-list-title></h3>
+        <h3 class="overlay__title" data-list-title>ppppp</h3>
         <div class="overlay__data" data-list-subtitle></div>
         <p class="overlay__data overlay__data_secondary" data-list-description></p>
     </div>
@@ -90,14 +90,19 @@ class BookPreview extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name === "title") {
-            this.shadowRoot.querySelector(".overlay__title").innerText = newValue;
+            this.shadowRoot.querySelector(".overlay__title").innerText = 
+            newValue;
         } else if (name === "image-src") {
             this.shadowRoot.querySelector(".overlay__image").src = newValue;
         }
     }
 }
 
+
+
 customElements.define("book-preview", BookPreview);
+
+
 export default BookPreview;
 
 
