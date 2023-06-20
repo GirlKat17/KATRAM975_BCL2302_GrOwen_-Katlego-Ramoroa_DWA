@@ -1,4 +1,3 @@
-
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -66,7 +65,7 @@ template.innerHTML = `
         <img class="overlay__image" data-list-image src=""/>
     </div>
     <div class="overlay__content">
-        <h3 class="overlay__title" data-list-title>ppppp</h3>
+        <h3 class="overlay__title" data-list-title></h3>
         <div class="overlay__data" data-list-subtitle></div>
         <p class="overlay__data overlay__data_secondary" data-list-description></p>
     </div>
@@ -89,20 +88,49 @@ class BookPreview extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if (name === "title") {
-            this.shadowRoot.querySelector(".overlay__title").innerText = 
-            newValue;
-        } else if (name === "image-src") {
-            this.shadowRoot.querySelector(".overlay__image").src = newValue;
+        document.querySelector("body > main > div.list__items > button:nth-child(1)").addEventListener('click', ()=>{
+            
+        this.shadowRoot.querySelector('[class="overlay"]').open = true;
+        this.shadowRoot.querySelector(".overlay__title").innerText = this.getAttribute("overlay__title");
+        this.shadowRoot.querySelector(".overlay__data").innerText = this.getAttribute("overlay__data");
+        this.shadowRoot.querySelector(".overlay__data_secondary").innerText = this.getAttribute("overlay__data overlay__data_secondary");
+        this.shadowRoot.querySelector(".overlay__image").src = this.getAttribute("data-list-image");
+    }
+
+    connectedCallback() {
+        this.shadowRoot
+   
+        }) ;
+    }
+    
+
+    handleBookItemClick(event) {
+        const pathArray = Array.from(event.path || event.composedPath());
+        let active = null;
+        for (const node of pathArray) {
+            if (active) break;
+            if (node?.dataset?.preview) {
+                let result = null;
+    
+                for (const singleBook of books) {
+                    if (result) break;
+                    if (singleBook.id === node?.dataset?.preview) result = singleBook;
+                }
+                active = result;
+            }
+        }
+    
+        if (active) {
+            document.querySelector('[data-list-active]').open = true;
+            document.querySelector('[data-list-blur]').src = active.image;
+            document.querySelector('[data-list-image]').src = active.image;
+            document.querySelector('[data-list-title]').innerText = active.title;
+            document.querySelector('[data-list-subtitle]').innerText = `${authors[active.author]} (${new Date(active.published).getFullYear()})`;
+            document.querySelector('[data-list-description]').innerText = active.description;
         }
     }
 }
 
-
-
 customElements.define("book-preview", BookPreview);
 
-
 export default BookPreview;
-
-
