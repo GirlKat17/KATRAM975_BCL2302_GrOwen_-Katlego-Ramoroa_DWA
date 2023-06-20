@@ -88,9 +88,7 @@ class BookPreview extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        document.querySelector("body > main > div.list__items > button:nth-child(1)").addEventListener('click', ()=>{
-            
-        this.shadowRoot.querySelector('[class="overlay"]').open = true;
+        
         this.shadowRoot.querySelector(".overlay__title").innerText = this.getAttribute("overlay__title");
         this.shadowRoot.querySelector(".overlay__data").innerText = this.getAttribute("overlay__data");
         this.shadowRoot.querySelector(".overlay__data_secondary").innerText = this.getAttribute("overlay__data overlay__data_secondary");
@@ -98,8 +96,13 @@ class BookPreview extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadowRoot
-   
+        document.querySelector("body > main > div.list__items > button:nth-child(1)").addEventListener('click', ()=>{
+            // this.handleBookItemClick.bind();
+        this.shadowRoot.querySelector('[class="overlay"]').open = true;
+        this.shadowRoot.querySelector(".overlay__title").innerText = this.getAttribute("overlay__title");
+        this.shadowRoot.querySelector(".overlay__data").innerText = this.getAttribute("overlay__data");
+        this.shadowRoot.querySelector(".overlay__data_secondary").innerText = this.getAttribute("overlay__data overlay__data_secondary");
+        this.shadowRoot.querySelector(".overlay__image").src = this.getAttribute("data-list-image");
         }) ;
     }
     
