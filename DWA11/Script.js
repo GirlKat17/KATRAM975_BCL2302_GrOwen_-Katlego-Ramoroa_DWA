@@ -1,3 +1,7 @@
+import {counterReducer} from './Reduce.js'
+import {store} from './store.js'
+
+
 
 const MAX_NUMBER = 15;
 const MIN_NUMBER = -5;
@@ -21,19 +25,25 @@ const subtractHandler = () => {
   if (newValue <= MIN_NUMBER) {
     subtract.disabled = true;
   }
+ console.log(newValue)
 };
 // function for addition
 
 const addHandler = () => {
   const newValue = parseInt(number.value) + 1;
   number.value = newValue;
+
   if (subtract.disabled === true) {
     subtract.disabled = false;
   }
   if (newValue >= MAX_NUMBER) {
     add.disabled = true;
   }
+  console.log(newValue)
 };
+
+
+
 
 
 subtract.addEventListener('click', subtractHandler);
@@ -45,6 +55,13 @@ function addReset(){
     alert("Are you sure you want to reset");
 number.value=0
 
+
 }
 reset.addEventListener('click', addReset);
 
+// const Results = () => {
+//   const newResults= (number)
+//   if
+//   new(subtract)
+//     console.log()
+// }
