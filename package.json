@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "jsdoc": "^4.0.2"
+  },
+  "dependencies": {
+    "lit": "^2.7.5",
+    "lit-html": "^2.7.4"
   }
 }
