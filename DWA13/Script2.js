@@ -1,4 +1,20 @@
-import {html, render} from 'lit-html';
+// import {html, render} from 'https://unpkg.com/lit-html?module';
+
+// /**
+//  * @param {string} name
+//  */
+ 
+// const createView = (name)=>{
+// return html`
+// <div> hello,your name is ${name}</div>`;
+// }
+// const tree1= createView('Katlego')
+// const treee2= createView('Ramoroa')
+
+// render(tree1,document.querySelector("[data-app]"));
+// //console.log(html,render); 
+
+
 
 const products = [
     { product: 'banana', price: "2" },
@@ -9,10 +25,12 @@ const products = [
     { product: 'tea', price: '' },
   ]
 
-  console.log{
 
-  }
+  products.forEach(products => {
+    console.log(products);
 
-/**
- *  
- */
+  });
+
+  
+
+ 

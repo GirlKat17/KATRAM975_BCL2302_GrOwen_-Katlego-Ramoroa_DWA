@@ -1,9 +1,11 @@
-const MAX_NUMBER = 15;
+//import {html, render} from './lit-html';
+
+const MAX_NUMBER = 20;
 const MIN_NUMBER = -5;
 const STEP_AMOUNT = 5;
+
 /**
- * @license
- * Copyright 2019 Google LLC
+ * 
  * 
  */
 
