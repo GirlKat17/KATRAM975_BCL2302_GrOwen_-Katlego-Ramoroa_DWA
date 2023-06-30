@@ -1,6 +1,6 @@
 import {html,LitElement,css} from './lit-html.js';
 
-const MAX_NUMBER = 20;
+const MAX_NUMBER = 15;
 const MIN_NUMBER = -5;
 const STEP_AMOUNT = 5;
 
@@ -205,6 +205,8 @@ body {
 constructor(){
   super()
   this.value = 0
+  this. MAX_NUMBER = 15
+  this.MIN_NUMBER = -5
  
 }
 
@@ -235,8 +237,8 @@ constructor(){
     <main class="counter">
         <input class="counter_value"  readonly value="${this.value}" />
         <div class="counter_actions">
-            <button data-key="subtract" class="counter_button counter_button_first" @click="${this.subtractHandler}">-</button>
-            <button data-key="add" class="counter_button" @click="${this.addHandler}">+</button>
+            <button data-key="subtract" class="counter_button counter_button_first" @click="${this.subtractHandler}" ?disabled ="${this.value = 2}">-</button>
+            <button data-key="add" class="counter_button" @click="${this.addHandler}" ?disabled = "${this.value =this.MAX_NUMBER}">+</button>
         </div>
     </main> 
     
@@ -245,13 +247,13 @@ constructor(){
 
    subtractHandler () {
     this.value--
-    console.log(this.value)
+    this.requestUpdate();
     
   };
 
    addHandler ()  {
   this.value++
-  console.log(this.value)
+ this.requestUpdate()
 
  };
 
