@@ -1,10 +1,13 @@
+ import logo from "./images/work.png"
+ 
  export default function Header1(){
     return(
 <header>
-        <nav className="PicLine">
-        <img src="./images/work.png" className="ImagePic"/>
+        <nav className="BarNav">
+        <img src={logo} className="ImagePic"/>
+        <h3></h3>
         <ul className="Nav-Items">
-            <li>Pricing</li>
+            <li>Home</li>
             <li>About</li>
             <li>Contact</li>
         </ul>

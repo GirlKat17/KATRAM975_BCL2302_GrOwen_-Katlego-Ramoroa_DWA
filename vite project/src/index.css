@@ -24,16 +24,15 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 200px;
   min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding-left: 20%;
 }
 
 button {
@@ -66,4 +65,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.Nav-Items{
+  list-style: none;
+  display: flex;
+
+}
+
+.BarNav{
+  display: flex;
+  justify-content: space-between;
+  background-color: #eaecf5;
+  height: 90px;
+  padding: 30px 25px;
+ 
+}
+.Nav-Items>li{
+  padding: 30px ;
+
+}
+.imagePic{
+  width: 70px;
+  height: 30px;
+  margin-right: 7px ;
 }

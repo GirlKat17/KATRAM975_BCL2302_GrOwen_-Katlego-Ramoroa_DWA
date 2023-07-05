@@ -1,7 +1,7 @@
 export default function Main(){
     return (
         <div>
-        <h1>Fun Facts about React </h1>
+        <h1>Katlego Patience Ramoroa</h1>
         <ul>
             <li>Was first released in 2023</li>
             <li> Was orginally created by Jordan</li>
