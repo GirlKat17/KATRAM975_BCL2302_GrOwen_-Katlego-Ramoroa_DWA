@@ -1,0 +1,19 @@
+.Nav-Items{
+    list-style: none;
+    display: flex;
+
+}
+
+.PicLine{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Nav-Items>li{
+    padding: 10px;
+}
+
+.imagePic{
+    width: 60px;
+}

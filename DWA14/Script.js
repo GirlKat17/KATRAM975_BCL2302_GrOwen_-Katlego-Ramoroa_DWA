@@ -238,7 +238,7 @@ constructor(){
         <input class="counter_value"  readonly value="${this.value}" />
         <div class="counter_actions">
             <button data-key="subtract" class="counter_button counter_button_first" @click="${this.subtractHandler}" ?disabled ="${this.value = 2}">-</button>
-            <button data-key="add" class="counter_button" @click="${this.addHandler}" ?disabled = "${this.value =this.MAX_NUMBER}">+</button>
+            <button data-key="add" class="counter_button" @click="${this.addHandler}" ?disabled = "${this.value = 15}">+</button>
         </div>
     </main> 
     
